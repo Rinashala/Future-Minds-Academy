@@ -1,0 +1,22 @@
+h1{
+    background-color: black;
+    color: pink;
+    font-size: 150;
+   
+}
+h2{
+    background-color: violet;
+    color: purple;
+    font-family: sans-serif;
+}
+h3{
+    background-color: yellowgreen;
+    color:green;
+    font-size: 200px;
+}
+p{
+    background-color: rgb(217, 112, 112);
+    color: red;
+   text-decoration: underline;
+
+}
