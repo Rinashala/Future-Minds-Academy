@@ -1,0 +1,11 @@
+p:hover {
+    background-color: violet;
+}
+
+p {
+    background-color: brown;
+}
+
+p:hover::first-letter {
+    font-size: 100px;
+}

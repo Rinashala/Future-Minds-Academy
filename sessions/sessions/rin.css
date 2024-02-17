@@ -1,0 +1,17 @@
+.red h2{
+    color: red;
+}
+.red+h6{
+    color: blue;
+}
+div:hover h3{
+    color: gray;
+}
+
+input:focus{
+    background-color: green;
+}
+div~h2{
+    color: red;
+}
+    

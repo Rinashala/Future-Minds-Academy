@@ -1,0 +1,21 @@
+body {
+    background-image: url(./images/card-1.jpeg);
+    background-size: cover;
+    color: blue;
+
+}
+
+.bgColor {
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+#background {
+    background-color: rgb(98, 98, 70);
+    background: linear-gradient(48deg, rgb(212, 142, 238) 15%, rgb(117, 142, 232) 64%);
+}
+
+nav .bgColor {
+    background-color: rgba(100, 78, 200, 0.4);
+
+}
