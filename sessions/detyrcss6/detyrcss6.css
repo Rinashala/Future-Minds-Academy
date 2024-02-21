@@ -1,0 +1,30 @@
+/* butonin mja ndru ngjyren kur t hover edhe kshtu , 50npx mi largu h1  h2 50 mi largu nmidis kur ta hover 3h1 me ndrru ngjyren*/
+.box1 {
+    background-color: yellow;
+}
+
+.box12:hover {
+    background-color: purple;
+}
+
+.box2 button {
+    background-color: aqua;
+}
+
+.box2:hover button {
+    background-color: black;
+}
+
+.box11 h2 {
+    margin: 50px 0px;
+}
+
+.box12 h1 {
+    display: inline;
+}
+
+.box12 {
+
+    border: 50px solid blanchedalmond;
+
+}

@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+    font-size: 1.1em;
+    font-family: "Fjalla One", sans-serif;
+}
+
+.box1 {
+    background-color: rgb(76, 71, 71);
+    color: white;
+    height: 25vh;
+}
+
+.box2 {
+    background-color: rgb(210, 204, 176);
+    height: 25vh;
+}
+
+hr {
+    width: 33%;
+    border: 1px solid red;
+
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0px;
+}
+
+.box1 a {
+    color: white;
+
+}
+
+.box2 a {
+    color: black;
+}

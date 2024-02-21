@@ -1,0 +1,24 @@
+p {
+    background-color: bisque;
+    border: 2px solid black;
+    padding: 15px;
+    font-family: "Fjalla One", sans-serif;
+
+
+}
+
+img {
+    width: 300px;
+    float: left;
+    border: 2px solid black;
+    margin: 10px;
+    width: 300px;
+}
+
+
+img:hover {
+    width: 310px;
+    border: 2px dashed red;
+    cursor: pointer;
+    padding: 10px;
+}

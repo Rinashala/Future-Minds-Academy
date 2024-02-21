@@ -6,6 +6,6 @@ p {
     background-color: brown;
 }
 
-p:hover::first-letter {
+p:hover:first-letter {
     font-size: 100px;
 }
