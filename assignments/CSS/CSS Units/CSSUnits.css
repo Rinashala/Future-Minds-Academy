@@ -24,6 +24,7 @@ hr {
 h1 {
     font-size: 2em;
     margin: 0px;
+    text-decoration: underline;
 }
 
 .box1 a {
