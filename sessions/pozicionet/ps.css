@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.div6 {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    background-color: red;
+    width: 300px;
+    height: 300px;
+}
+
+.div4 {
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+}
+
+.box1 {
+    background-color: yellow;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+
+
+.div1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: olivedrab;
+}
+
+.div2 {
+    position: absolute;
+    right: 0;
+    background-color: blue;
+}
+
+.div3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: aquamarine;
+}
