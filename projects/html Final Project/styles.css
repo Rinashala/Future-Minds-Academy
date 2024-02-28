@@ -7,7 +7,7 @@ body {
     background-image: url(./images/bgimg3.jpg);
     background-size: cover;
     text-align: center;
-    cursor: url('./images/rocket1.png') 16 16, auto;
+    cursor: url("./images/icons8-rocket-100.png") 100 0, pointer;
 }
 
 /* Global */
@@ -28,9 +28,7 @@ li {
     text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
+.paddibgBottm30 {
     padding-bottom: 30px;
 }
 
@@ -38,7 +36,8 @@ th {
     background-color: rgb(169, 99, 195);
 }
 
-/* main */
+/* header */
+
 .bgRed {
     background-color: rgb(215, 137, 137);
     border-radius: 10px;
@@ -50,6 +49,20 @@ th {
     background-color: rgb(185, 68, 68);
 }
 
+.dInline-block {
+    display: inline-block;
+}
+
+.dInline {
+    display: inline;
+    margin: 0 20px;
+}
+
+.marginY7X3 {
+    margin: 7px 3px;
+}
+
+/* main */
 .card {
     border: 2px solid transparent;
     border-radius: 15px;
@@ -114,33 +127,6 @@ table {
     color: aliceblue;
     padding: 20px;
     background-color: rgb(72, 69, 69);
-}
-
-
-.box1 li {
-    display: inline-block;
-    position: relative;
-    margin: 10px 30px;
-}
-
-.box1 li:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -35px;
-    bottom: 8px;
-    display: inline-block;
-    width: 2px;
-    height: 17px;
-    background-color: #000;
-}
-
-.formMargin {
-    margin: 7px 3px;
-}
-
-.imgBorder {
-    border-radius: 10px;
-    margin: 10px 10px;
 }
 
 .buttonStyle {
