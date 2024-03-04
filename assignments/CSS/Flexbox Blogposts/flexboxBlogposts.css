@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    gap: 2rem;
+}
+
+/* global */
+a {
+    text-decoration: none;
+    color: rgb(23, 59, 107);
+}
+
+.paddingX20 {
+    padding-bottom: 20px;
+}
+
+.fontSize07 {
+    font-size: 0.7rem;
+}
+
+.fontSize2 {
+    font-size: 2.4rem;
+}
+
+.bggreen {
+    background-color: green;
+    border: solid 1px green;
+    padding: 2px;
+}
+
+.bgBlue {
+    background-color: blue;
+    border: solid 1px blue;
+    padding: 2px;
+}
+
+.bgRed {
+    background-color: red;
+    border: solid 1px red;
+    padding: 2px;
+}
+
+.white {
+    color: white;
+}
+
+.fontSize15 {
+    font-size: 1.5rem;
+}
+
+.margin20 {
+    margin: 20px;
+}
+
+.gap {
+    gap: 5rem;
+}
+
+.gray {
+    color: gray;
+}
+
+.paddingY20 {
+    padding-top: 20px;
+
+}
+
+.display2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+/* aside */
+.aside {
+    background: rgb(108, 80, 119);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aside-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    align-items: end;
+    margin: 20px;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(108, 80, 119);
+    border: rgb(202, 182, 210) solid 2px;
+}
+
+.gap {
+    gap: 2rem;
+}
+
+/* main */
+.content-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100rem;
+    gap: 1rem;
+}
+
+img {
+    border-radius: 50%;
+}

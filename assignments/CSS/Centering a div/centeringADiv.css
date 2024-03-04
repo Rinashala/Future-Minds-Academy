@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(213, 173, 112);
+}
+
+/* global */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.flex-child {
+    background-color: aliceblue;
+    font-size: 2.2rem;
+    border: 2px solid black;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
