@@ -58,3 +58,7 @@ main {
     width: 100px;
     padding: 7px;
 }
+
+.card-img img {
+    width: 100%;
+}
