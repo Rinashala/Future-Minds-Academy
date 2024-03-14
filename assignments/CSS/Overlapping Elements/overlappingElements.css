@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+/* global */
+.paddingY20 {
+    padding: 20px;
+}
+
+/* body */
 body {
     background-color: wheat;
     display: grid;
@@ -20,10 +26,6 @@ header {
     border-radius: 0 0 25px 25px;
 }
 
-/* global */
-.paddingY20 {
-    padding: 20px;
-}
 
 h1 {
     text-align: center;
