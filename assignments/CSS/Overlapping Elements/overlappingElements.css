@@ -4,7 +4,7 @@
 }
 
 /* global */
-.paddingY20 {
+.padding20 {
     padding: 20px;
 }
 
@@ -16,7 +16,6 @@ body {
     grid-template-columns: 100px 1fr 100px;
     height: 100vh;
     font-family: "Montserrat", sans-serif;
-
 }
 
 header {
@@ -29,7 +28,6 @@ header {
 
 h1 {
     text-align: center;
-
 }
 
 main {
