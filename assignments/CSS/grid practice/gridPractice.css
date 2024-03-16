@@ -3,12 +3,19 @@
     padding: 0;
 }
 
+/* global */
+.bgViolet {
+    background-color: blueviolet;
+}
+
+/* body */
 body {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     height: 100vh;
 }
 
+/* main */
 main {
     grid-template-columns: repeat(4, 1fr);
     display: grid;
@@ -17,9 +24,4 @@ main {
 
 div {
     background-color: palevioletred;
-}
-
-/* global */
-.bgViolet {
-    background-color: blueviolet;
 }

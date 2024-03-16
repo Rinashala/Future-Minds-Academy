@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* global */
+a,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+/* body */
+body {
+    background-color: gray;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+/* header */
+header {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.div1 {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+aside {
+    background-color: purple;
+
+
+}
+
+.aside1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+/* main */
+main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+main:hover .green {
+    background-color: cadetblue;
+}
+
+aside .rina {
+    margin: 20px;
+    padding: 40px;
+}
+
+.color {
+    background-color: aquamarine;
+}
+
+.section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.green {
+    background-color: green;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.section3 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: brown;
+    height: 80px;
+    width: 80px;
+}
+
+/* footer */
+footer {
+    background-color: blue;
+}
