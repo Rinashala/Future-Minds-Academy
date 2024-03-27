@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* body */
+body {
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 2rem;
+}
+
+/* global */
+a {
+    text-decoration: none;
+    color: rgb(23, 59, 107);
+}
+
+.paddingX20 {
+    padding-bottom: 20px;
+}
+
+.fontSize07 {
+    font-size: 0.7rem;
+}
+
+.fontSize2 {
+    font-size: 2.4rem;
+}
+
+.bggreen {
+    background-color: green;
+    border: solid 1px green;
+    padding: 2px;
+}
+
+.bgBlue {
+    background-color: blue;
+    border: solid 1px blue;
+    padding: 2px;
+}
+
+.bgRed {
+    background-color: red;
+    border: solid 1px red;
+    padding: 2px;
+}
+
+.white {
+    color: white;
+}
+
+.fontSize15 {
+    font-size: 1.5rem;
+}
+
+.margin20 {
+    margin: 20px;
+}
+
+.gray {
+    color: gray;
+}
+
+.paddingY20 {
+    padding-top: 20px;
+
+}
+
+.cardText,
+.cardButton {
+    text-align: center;
+    padding: 10px;
+}
+
+/* aside */
+.aside {
+    background: rgb(108, 80, 119);
+    display: grid;
+    place-content: center;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(108, 80, 119);
+    border: rgb(202, 182, 210) solid 2px;
+    grid-column-start: 2;
+}
+
+/* main */
+.contentContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+img {
+    border-radius: 50%;
+}
+
+/* responsive */
+@media (min-width: 800px) {
+
+    body {
+        grid-template-columns: 250px 1fr;
+    }
+
+    aside {
+        height: 100vh;
+    }
+
+    .cardText {
+        display: grid;
+        grid-row: 1fr 1fr 1fr;
+        text-align: end;
+    }
+
+    .cardButton {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    .contentContainer {
+        grid-template-rows: 1fr 1fr;
+    }
+
+}

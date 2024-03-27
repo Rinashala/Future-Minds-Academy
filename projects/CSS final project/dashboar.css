@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* global */
+.dGrid {
+    display: grid;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.BgIcon:hover {
+    box-shadow: 0px 0px 30px 3px rgba(173, 172, 172, 0.75);
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.icons {
+    width: 20px;
+}
+
+.borderRadius5 {
+    border-radius: 5px;
+}
+
+.bgGray:hover {
+    background-color: rgba(128, 128, 128, 0.61);
+}
+
+.bgLightGray {
+    background-color: rgba(207, 197, 197, 0.61);
+}
+
+.pRelative {
+    position: relative;
+}
+
+/* body */
+body {
+    grid-template-columns: auto 1fr;
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+}
+
+/* aside */
+aside {
+    background-color: rgba(0, 0, 0, 0.824);
+    background-image: url(../../assignments/images/card-1.jpeg);
+    background-blend-mode: color;
+    background-size: cover;
+    color: white;
+}
+
+hr {
+    border: 0.7px gray solid;
+}
+
+.listItems {
+    grid-template-columns: 1fr auto;
+    padding: 3px;
+    margin: 6px 0;
+    gap: 3rem;
+    font-size: 0.7rem;
+    align-items: center;
+}
+
+.listItems1 {
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    margin: 10px;
+}
+
+.listItem {
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    margin: 5px;
+    align-items: center;
+}
+
+input {
+    background-color: inherit;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerchild {
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+}
+
+.searchInput:focus {
+    border-bottom: 2px solid purple;
+}
+
+.whiteBgGray {
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+
+a:hover+.pAbsoluteTransition,
+.pRelative:hover .notificationsList {
+    display: block;
+}
+
+.pAbsoluteTransition {
+    position: absolute;
+    display: none;
+    transition: display 1s;
+    padding: 3px;
+    font-size: 0.7rem;
+}
+
+.notifications {
+    border-radius: 100%;
+    font-size: 0.7rem;
+    width: 13px;
+    height: 13px;
+    color: white;
+    border: 1px solid red;
+    position: absolute;
+    right: 6px;
+    top: 10px;
+}
+
+.notificationsList {
+    right: 30px;
+    top: 10px;
+    width: 200px;
+    background-color: white;
+}
+
+.transitionBgRed:hover,
+.bgRed {
+    background-color: red;
+    color: white;
+}
+
+.BgIcon {
+    width: 10px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 0px 170px 30px rgba(0, 0, 0, 0.75);
+}

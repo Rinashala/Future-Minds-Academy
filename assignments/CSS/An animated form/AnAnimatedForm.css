@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* body */
+body {
+    background-color: rgb(210, 209, 209);
+    margin: 70px;
+}
+
+form {
+    width: 30vw;
+}
+
+/* global */
+.dGrid {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.inputCard {
+    padding: 10px;
+    outline: none;
+    border: transparent 3px solid;
+    width: 90%;
+}
+
+.inputCard:focus {
+    border: navy 3px solid;
+    border-radius: 3px;
+
+}
+
+.buttonCard {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    padding: 0.5rem;
+}
+
+img {
+    width: 40px;
+    animation: img 0.4s infinite forwards;
+}
+
+@keyframes img {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+div {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.pCard {
+    color: gray;
+    font-size: 0.7rem;
+    margin: 10px;
+}
+
+.animationFName,
+.animationLName,
+.animationEmail {
+    opacity: 0;
+}
+
+.animatedFName:focus+.animationFName,
+.animatedLName:focus+.animationLName,
+.animatedEmail:focus+.animationEmail {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}

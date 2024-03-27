@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* global */
+.dGrid {
+    display: grid;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.BgIcon:hover {
+    box-shadow: 0px 0px 30px 3px rgba(173, 172, 172, 0.75);
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.gap2rem {
+    gap: 2rem;
+}
+
+.icons {
+    width: 20px;
+}
+
+.borderRadius5 {
+    border-radius: 3px;
+}
+
+.bgGray:hover {
+    background-color: rgba(128, 128, 128, 0.61);
+}
+
+.bgLightGray {
+    background-color: lightgray;
+}
+
+.bgGreen {
+    background-color: green;
+}
+
+.fontSize07 {
+    font-size: 0.7rem;
+}
+
+/* body */
+body {
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    background-color: light rgb(96, 93, 93);
+}
+
+/* aside */
+aside {
+    background-color: rgba(0, 0, 0, 0.824);
+    background-image: url(../../assignments/images/card-1.jpeg);
+    background-blend-mode: color;
+    background-size: cover;
+    color: white;
+}
+
+hr {
+    border: 0.7px gray solid;
+}
+
+.listItems {
+    grid-template-columns: 1fr auto;
+    padding: 3px;
+    margin: 6px 0;
+    gap: 3rem;
+    align-items: center;
+}
+
+.listItems1 {
+    gap: 2rem;
+    margin: 10px;
+}
+
+.listItem {
+    gap: 2rem;
+    margin: 5px;
+    align-items: center;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerchild {
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+}
+
+.searchInput:focus {
+    border-bottom: 2px solid purple;
+}
+
+.whiteBgGray {
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+
+a:focus+.whiteBgGray,
+.pRelative:hover .notificationsList {
+    display: block;
+}
+
+.pAbsoluteTransition {
+    position: absolute;
+    display: none;
+    transition: display ease-in-out 2s;
+    padding: 3px;
+}
+
+.notifications {
+    border-radius: 100%;
+    width: 13px;
+    height: 13px;
+    color: white;
+    border: 1px solid red;
+    position: absolute;
+    right: 57px;
+    top: 18px;
+}
+
+.notificationsList {
+    right: 30px;
+    top: 10px;
+    width: 200px;
+    background-color: white;
+}
+
+.transitionBgRed:hover,
+.bgRed {
+    background-color: red;
+    color: white;
+}
+
+.pRelative {
+    position: relative;
+}
+
+.BgIcon {
+    width: 10px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 0px 170px 30px rgba(0, 0, 0, 0.75);
+}
+
+input {
+    background-color: inherit;
+}
+
+/* main */
+
+.mainCard {
+    grid-template-rows: auto 1fr;
+    margin: 50px;
+    padding: 20px;
+    background-color: white;
+}
+
+.h1 {
+    font-size: 1.5rem;
+    padding: 0 0 0 40px;
+}
+
+.fr-fr-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.auto-fr-grid1 {
+    grid-template-columns: auto 1fr;
+}
+
+.iconcard {
+    position: absolute;
+    padding: 23px;
+    top: -30px;
+    left: -5px;
+}
