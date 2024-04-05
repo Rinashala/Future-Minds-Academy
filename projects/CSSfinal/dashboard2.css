@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+/* e kom bo position fixed qe me nejt aside qashtu (tash nahsta duhet mja hek kejt gridin se sna vyn) */
+/* iframeitja kom dhon madhesin me perqindje qata u bo qashtu */
+
 /* global */
 .dGrid {
     display: grid;
@@ -21,16 +24,6 @@ li {
     box-shadow: 0px 0px 30px 3px rgba(173, 172, 172, 0.75);
 }
 
-.avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-}
-
-.icons {
-    width: 20px;
-}
-
 .borderRadius5 {
     border-radius: 5px;
 }
@@ -45,6 +38,79 @@ li {
 
 .pRelative {
     position: relative;
+}
+
+.gap2rem {
+    gap: 2rem;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.fontSize07 {
+    font-size: 0.7rem;
+}
+
+.bgWhite {
+    background-color: white;
+}
+
+.auto-fr-grid1 {
+    grid-template-columns: auto 1fr;
+}
+
+.fr-fr-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.bgGreen {
+    background-color: green;
+}
+
+.fr-auto-grid {
+    grid-template-columns: 1fr auto;
+}
+
+.hr {
+    border: 0.4px rgb(82, 79, 79) solid;
+}
+
+.gray {
+    color: gray;
+}
+
+.bgPink {
+    background-color: rgb(146, 45, 62);
+}
+
+.bgBlue {
+    background-color: blue;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.margintop50px {
+    margin-top: 50px;
+}
+
+.pAbsolute {
+    position: absolute;
+}
+
+.margintop30px {
+    margin-top: 30px;
+}
+
+.dFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.margin20 {
+    margin: 20px;
 }
 
 /* body */
@@ -63,46 +129,38 @@ aside {
     color: white;
 }
 
-hr {
-    border: 0.7px gray solid;
-}
-
 .listItems {
     grid-template-columns: 1fr auto;
     padding: 3px;
     margin: 6px 0;
     gap: 3rem;
-    font-size: 0.7rem;
-    align-items: center;
+}
+
+.icons {
+    width: 20px;
 }
 
 .listItems1 {
     grid-template-columns: auto 1fr;
-    gap: 2rem;
     margin: 10px;
 }
 
 .listItem {
     grid-template-columns: auto 1fr;
-    gap: 2rem;
     margin: 5px;
-    align-items: center;
 }
 
 input {
     background-color: inherit;
 }
 
-/* header */
-header {
-    display: flex;
-    justify-content: space-between;
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
 }
 
-.headerchild {
-    display: flex;
-    align-items: center;
-}
+/* header */
 
 .searchInput {
     border: none;
@@ -119,36 +177,29 @@ header {
     background-color: rgb(49, 49, 49);
 }
 
-a:hover+.pAbsoluteTransition,
 .pRelative:hover .notificationsList {
     display: block;
 }
 
-.pAbsoluteTransition {
-    position: absolute;
+.displayNone {
     display: none;
-    transition: display 1s;
     padding: 3px;
-    font-size: 0.7rem;
 }
 
 .notifications {
     border-radius: 100%;
-    font-size: 0.7rem;
     width: 13px;
     height: 13px;
     color: white;
     border: 1px solid red;
-    position: absolute;
     right: 6px;
-    top: 10px;
+    top: 5px;
 }
 
 .notificationsList {
     right: 30px;
     top: 10px;
     width: 200px;
-    background-color: white;
 }
 
 .transitionBgRed:hover,
@@ -157,9 +208,30 @@ a:hover+.pAbsoluteTransition,
     color: white;
 }
 
-.BgIcon {
+.circle {
     width: 10px;
-    background-color: white;
     border-radius: 100%;
     box-shadow: 0px 0px 170px 30px rgba(0, 0, 0, 0.75);
+}
+
+/* div */
+.prov2 {
+    padding: 40px;
+}
+
+/* main */
+.mainCard {
+    grid-template-rows: auto 1fr;
+    padding: 20px;
+}
+
+.iconcard {
+    padding: 23px;
+    top: -30px;
+    left: -5px;
+}
+
+.mainCardTitle {
+    font-size: 1.5rem;
+    padding: 0 40px;
 }
