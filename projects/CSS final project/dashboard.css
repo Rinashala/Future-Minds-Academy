@@ -273,7 +273,7 @@ footer {
     display: inline;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 
     aside,
     .desktopHeader {
@@ -294,8 +294,8 @@ footer {
         grid-template-columns: 1fr auto;
     }
 
-    .listingIcons {
-        bottom: 12%;
+    .tabletListingCard {
+        gap: 4.5rem;
     }
 }
 
@@ -304,7 +304,4 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .tabletListingCard {
-        gap: 4.5rem;
-    }
 }
