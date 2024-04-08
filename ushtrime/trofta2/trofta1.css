@@ -4,33 +4,101 @@
 }
 
 body {
-    background-color: rgb(253, 246, 240);
-
+    font-family: "Tilt Neon", sans-serif;
+    background-color: rgb(244, 239, 229);
+    color: rgb(79, 74, 69);
 }
 
-/* global */
+header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+hr {
+    margin: 5px;
+    border: 0.4px rgb(207, 201, 201) solid;
+}
+
+.card1 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 20px 80px;
+}
+
+.card1content h1:first-child {
+    margin: 40px 0 0 20px;
+}
+
+.card1content h1 {
+    font-size: 4.5rem;
+    /* color: rgb(194, 134, 24); */
+}
+
+.card1content h1:not(:first-child) {
+    margin: 0 0 0 100px;
+}
+
+.card1 .foto1:hover {
+    animation: rotate 1s ease forwards;
+}
+
+.card1 .foto1 {
+    border-radius: 50%;
+    box-shadow: 0px 0px 108px 10px rgba(179, 179, 166, 1);
+}
+
+.card1 img:not(.foto1) {
+    width: 30px;
+}
+
+.card1 p {
+    display: inline;
+    text-align: center;
+    padding-right: 260px;
+}
+
+.card1 button {
+    background-color: transparent;
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+    border: 2px solid rgb(194, 134, 24);
+    gap: 2rem;
+}
+
+.card1 button:hover {
+    background-color: rgb(194, 134, 24);
+    color: white;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card2 {
+    font-size: 1.5rem;
+    margin: 80px;
+    padding: 40px;
+    text-align: center;
+}
+
 a,
 li {
     text-decoration: none;
     list-style: none;
-    color: rgb(31, 31, 31);
-}
-
-span {
-    color: rgb(228, 174, 49);
-}
-
-/* header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.listcard1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
+    color: rgb(79, 74, 69);
 }
