@@ -146,6 +146,10 @@ li {
     color: white;
 }
 
+.margin10 {
+    margin: 10px;
+}
+
 /* body */
 body {
     -ms-grid-columns: auto 1fr;
@@ -172,10 +176,6 @@ aside {
 
 .icons {
     width: 20px;
-}
-
-.listUser {
-    margin: 10px;
 }
 
 .listItemscontainer {
@@ -250,11 +250,6 @@ input {
 }
 
 /* main */
-.locationCard {
-    -ms-grid-rows: auto 1fr;
-    grid-template-rows: auto 1fr;
-}
-
 .iconCard {
     -webkit-transform: translateY(-35px);
     -ms-transform: translateY(-35px);
@@ -297,7 +292,7 @@ input {
     -webkit-transition: display 1s ease;
     -o-transition: display 1s ease;
     transition: display 1s ease;
-    bottom: 20%;
+    bottom: 10%;
     left: 50%;
     -webkit-transform: translate(-50%);
     -ms-transform: translate(-50%);

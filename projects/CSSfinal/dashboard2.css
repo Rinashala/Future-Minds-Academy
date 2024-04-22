@@ -233,10 +233,6 @@ input {
 }
 
 /* main */
-.locationCard {
-    grid-template-rows: auto 1fr;
-}
-
 .iconCard {
     transform: translateY(-35px);
     transition: transform .7s ease;
