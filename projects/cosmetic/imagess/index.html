@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--======title====-->
+    <title>Beauty Products Website</title>
+    <!--=======CSS=====-->
+    <link rel="stylesheet" href="style.css">
+    <!--======icon-->
+    <link rel="shortcut icon" href="imagess/ikona.png">
+    <!--=====font-awesome=======-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--==poppins-font==========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+        <!--======navigation========-->
+        <nav class="navigation">
+            <!--logo-->
+            <a href="#" class="logo">
+                <img src="https://www.bing.com/images/search?view=detailV2&ccid=gwBBL%2fKR&id=E8B1AA141DC019610EBE2FB94481F9FB5D85AB32&thid=OIP.gwBBL_KR7CS0CSJ2DxsOfwHaHa&mediaurl=https%3a%2f%2fwww.liveabout.com%2fthmb%2f7fxzqOwuXP7jq2vBS8o_dOK-ZXs%3d%2f3250x3250%2ffilters%3afill(auto%2c1)%2f78398227-56a086513df78cafdaa26f1a.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8300412ff291ec24b40922760f1b0e7f%3frik%3dMquFXfv5gUS5Lw%26pid%3dImgRaw%26r%3d0&exph=3250&expw=3250&q=Makeup+Tools&simid=608054201509235934&FORM=IRPRST&ck=36E18779E40AFE552BF03DCE3A3D565A&selectedIndex=0" />
+            </a>
+            <!--======navbar========-->
+            <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#skincare">Skincare</a>
+            <a href="#makeup">Makeup</a>
+            <a href="#fragrances">Fragrances</a>
+            <a href="newproducts">New Products</a>
+            </nav>
+            <!--========search=====-->
+            <form class="search-box">
+                <input type="text" placeholder="Search" required>
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <!--=======buttons=========-->
+            <div class="nav-btns">
+    
+                <!--========user======-->
+                <a href="#" class="nav-user">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <!--======cart======-->
+                <a href="#" class="nav-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </nav>
+        <!--=====nav-end=====-->
+    
+    
+        <!--=====main==========-->
+        <section id="main">
+    
+            <!--***text************-->
+            <div class="main-text">
+                <span>New Collection</span>
+                <h1>JUST APPROVED</h1>
+                <p>Check the latest obsession-worthy products our Committee of Industry Experts
+                    in Beauty Co. have deemed best-in-class.</p>
+                <a href="#">
+                    <font>Shop now</font>
+                </a>
+            </div>
+    
+            <!--***image*************-->
+            <div class="main-img">
+                <img src="imagess/gif.gif" />
+            </div>
+    
+        </section><!--main-end-->
+<body>
+    <!--===product-grid======================-->
+    <section class="product-grid-3">
+
+        <!--****box1***********-->
+        <div class="product-grid-box product-grid-box1">
+            <!--img-->
+            <img src="imagess/s1.jpg" />
+            <!-- txt -->
+            <div class="product-grid-text">
+                <strong>Natural Green Lotion</strong>
+                <span>Skincare Products</span>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+
+        <!--****box2***********-->
+        <div class="product-grid-box product-grid-box2">
+            <!--img-->
+            <img src="imagess/s2.jpg" />
+            <!-- txt -->
+            <div class="product-grid-text">
+                <strong>3in1 Novage Lotions</strong>
+                <span>Skincare Products</span>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+
+        <!--****box3***********-->
+        <div class="product-grid-box product-grid-box3">
+            <!--img-->
+            <img src="imagess/s3.jpg" />
+            <!-- txt -->
+            <div class="product-grid-text">
+                <strong>Gold Facewash & Perfume</strong>
+                <span>Skincare & Fragrances</span>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+    </section> <!--grid-end-->
+
+    <!--=====new-products=============-->
+    <section id="new_products">
+
+        <!--***heading**************-->
+        <div class="new-p-heading">
+            <!-- heading -->
+            <h3>All Products</h3>
+            <!-- filter -->
+            <ul>
+                <li class="active" data-filter="all">All</li>
+                <li data-filter="skincare">Skincare</li>
+                <li data-filter="makeup">Makeup</li>
+                <li data-filter="fragrances">Fragrances</li>
+            </ul>
+        </div>
+
+        <!--*****container*************-->
+        <div class="new-product-container">
+
+            <!--**box1**-->
+            <div class="new-product-box makeup">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/1.webp" alt="">
+                    <span>Makeup</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Fenty Beauty</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Pro Filt’r Soft Matte Liquid Foundation</a>
+                    <span>19$</span>
+                </div>
+            </div>
+
+            <!--**box2**-->
+            <div class="new-product-box makeup">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/2.webp" alt="">
+                    <span>Makeup</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Dior</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">BACKSTAGE Rosy Glow Blush</a>
+                    <span>42$</span>
+                </div>
+            </div>
+
+            <!--**box3**-->
+            <div class="new-product-box skincare">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/3.webp" alt="">
+                    <span>Skincare</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">The Ordinary</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Niacinamide 10% + Zinc 1% Oil Control Serum</a>
+                    <span>11$</span>
+                </div>
+            </div>
+
+            <!--**box4**-->
+            <div class="new-product-box fragrances">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/4.webp" alt="">
+                    <span>Fragrances</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">CHANEL</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">CHANCE EAU FRAÎCHE Eau de Toilette</a>
+                    <span>89$</span>
+                </div>
+            </div>
+
+            <!--**box5**-->
+            <div class="new-product-box fragrances">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/5.webp" alt="">
+                    <span>Fragrances</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Sol de Janeiro</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Brazilian Crush Cheirosa ’40 Bom Dia</a>
+                    <span>24$</span>
+                </div>
+            </div>
+
+            <!--**box6**-->
+            <div class="new-product-box fragrances">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/6.webp" alt="">
+                    <span>Fragrances</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Yves Saint Laurent</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Mini Black Opium & Libre Eau de Parfum Set</a>
+                    <span>35$</span>
+                </div>
+            </div>
+
+            <!--**box7**-->
+            <div class="new-product-box fragrances">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/7.webp" alt="">
+                    <span>Fragrances</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Versace</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Bright Crystal Eau de Toilette Spray</a>
+                    <span>105$</span>
+                </div>
+            </div>
+
+            <!--**box8**-->
+            <div class="new-product-box makeup">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/8.webp" alt="">
+                    <span>Makeup</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Rare Beauty</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Warm Wishes Effortless Bronzer Sticks</a>
+                    <span>26$</span>
+                </div>
+            </div>
+
+            <!--**box9**-->
+            <div class="new-product-box skincare">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/9.webp" alt="">
+                    <span>Skincare</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">IT Cosmetics</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Bye Bye Under Eye Brightening Eye Cream</a>
+                    <span>55$</span>
+                </div>
+            </div>
+
+            <!--**box10**-->
+            <div class="new-product-box skincare">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/10.webp" alt="">
+                    <span>Skincare</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Sol de Janeiro</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Brazilian Kiss Cupuaçu Lip Butter</a>
+                    <span>18$</span>
+                </div>
+            </div>
+
+            <!--**box11**-->
+            <div class="new-product-box skincare">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/11.webp" alt="">
+                    <span>Skincare</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">fresh</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Black Tea Anti-Aging Moisturizer</a>
+                    <span>20$</span>
+                </div>
+            </div>
+
+            <!--**box12**-->
+            <div class="new-product-box skincare">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/12.webp" alt="">
+                    <span>Skincare</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">LANEIGE</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Midnight to Morning Hydration Set</a>
+                    <span>31$</span>
+                </div>
+            </div>
+
+            <!--**box13**-->
+            <div class="new-product-box fragrances">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/13.webp" alt="">
+                    <span>Fragrances</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Gucci</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Mini Flora Gorgeous Jasmine Perfume Set</a>
+                    <span>112$</span>
+                </div>
+            </div>
+
+            <!--**box14**-->
+            <div class="new-product-box makeup">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/14.webp" alt="">
+                    <span>Makeup</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">Yves Saint Laurent</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Candy Glaze Lip Gloss Stick</a>
+                    <span>39$</span>
+                </div>
+            </div>
+
+            <!--**box15**-->
+            <div class="new-product-box makeup">
+                <!-- img -->
+                <a href="#" class="new-product-img">
+                    <img src="imagess/15.webp" alt="">
+                    <span>Makeup</span>
+                </a>
+                <!-- txt -->
+                <div class="new-product-text">
+                    <a href="#" class="new-product-title">NARS</a>
+                </div>
+                <div class="new-product-textt">
+                    <a href="#" class="new-product-titlee">Radiant Creamy Concealer</a>
+                    <span>42$</span>
+                </div>
+            </div>
+        </div>
+    </section><br>
+
+    <!--=====popular-products-table======-->
+    <div class="table-box">
+
+        <!-- table-row-1 -->
+        <div class="table-row table-head">
+            <div class="table-cell">
+                <p>New Products</p>
+            </div>
+            <div class="table-cell">
+                <p>Brand</p>
+            </div>
+            <div class="table-cell">
+                <p>Price</p>
+            </div>
+        </div>
+
+        <!-- table-row-2 -->
+        <div class="table-row">
+            <div class="table-cell">
+                <p><a href="https://www.sephora.com/product/dior-rosy-glow-blush-P454762?skuId=2328375&icid2=products%20grid:p454762:product" class="table-link">BACKSTAGE Rosy Glow Blush</a></p>            
+            </div>
+            <div class="table-cell">
+                <p><b>Dior</b></p>
+            </div>
+            <div class="table-cell">
+                <p>42$</p>
+            </div>
+        </div>
+
+        <!-- table-row-3 -->
+        <div class="table-row">
+            <div class="table-cell">
+                <p><a href="https://www.sephora.com/product/bright-crystal-P163103?skuId=1063619&icid2=products%20grid:p163103:product" class="table-link">Bright Crystal Eau de Toilette Spray</a></p>
+            </div>
+            <div class="table-cell">
+                <p><b>Versace</b></p>
+            </div>
+            <div class="table-cell">
+                <p>105$</p>
+            </div>
+        </div>
+
+        <!-- table-row-4-->
+        <div class="table-row">
+            <div class="table-cell">
+              <p><a href="https://www.sephora.com/product/brazilian-kiss-cupua-u-lip-butter-P415747?skuId=1902386&icid2=products%20grid:p415747:product" class="table-link">Brazilian Kiss Cupuaçu Lip Butter</a></p>
+            </div>
+            <div class="table-cell">
+              <p><b>Sol de Janeiro</b></p>
+            </div>
+            <div class="table-cell">
+              <p>18$</p>
+            </div>
+          </div>
+
+        <!-- table-row-5 -->
+            <div class="table-row">
+              <div class="table-cell">
+                <p><a href="https://www.sephora.com/product/laneige-midnight-to-morning-hydration-set-P504208?skuId=2639557&icid2=products%20grid:p504208:product" class="table-link">Midnight to Morning Hydration Set</a></p>
+            </div>
+              <div class="table-cell">
+                <p><b>LANEIGE</b></p>
+              </div>
+              <div class="table-cell">
+                <p>31$</p>
+              </div>
+            </div>
+          </a>
+    </div><br>
+
+ <!--***heading**************-->
+ <div class="new-p-headingg">
+    <!-- heading -->
+    <h3>Our Top Products</h3>
+     <!--***list**************-->
+    <div class="top-rated-list">
+        <ol>
+          <li>Bye Bye Under Eye Brightening Eye Cream: 4.8 <i class="fa-solid fa-star"></i></li>
+          <li>Warm Wishes Effortless Bronzer Sticks: 4.7 <i class="fa-solid fa-star"></i></li>
+          <li>Brazilian Cruch Cheirosa '40 Bom Dia: 4.6 <i class="fa-solid fa-star"></i></li>
+          <li>Radiant Creamy Concealer: 4.5 <i class="fa-solid fa-star"></i></li>
+          <li>Black Tea Anti-Aging Moisturizer: 4.4 <i class="fa-solid fa-star"></i></li>
+        </ol>
+      </div>
+      </div><br>
+
+      <!-- footer -->
+      <footer>
+        <ul class="social_icon">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>  
+          <li><a href="#">About</a></li>  
+          <li><a href="#">Services</a></li>  
+          <li><a href="#">Team</a></li>  
+          <li><a href="#">Contact Us</a></li>  
+        </ul>
+        <p>© 2023 Beauty Co. Products | All Rights Reserved</p>
+      </footer>
+
+    <!--=jquery==============-->
+    <script src="js/jquery-3.7.0.js"></script>
+
+    <!--===script================-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var selector = '.new-p-heading li';
+
+            $(selector).on('click', function () {
+                $(selector).removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+
+        /*-box-filter--------*/
+        $(document).ready(function () {
+            $('.new-p-heading li').click(function () {
+                const value = $(this).attr('data-filter');
+                if (value == 'all') {
+                    $('.new-product-box').show('1000');
+                }
+                else {
+                    $('.new-product-box').not('.' + value).hide('1000');
+                    $('.new-product-box').filter('.' + value).show('1000');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

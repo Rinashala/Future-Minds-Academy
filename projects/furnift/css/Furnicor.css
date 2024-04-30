@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nanum Myeongjo", serif;
+    overflow-x: hidden;
+    color: rgb(108, 85, 69);
+}
+
+a,
+li {
+    list-style: none;
+    text-decoration: none;
+    color: rgb(108, 85, 69);
+}
+
+/* global */
+
+.custom-border {
+    border: 2px solid rgba(108, 85, 69, 0.721);
+}
+
+.customBackgroundcolor {
+    background-color: rgb(108, 85, 69);
+}
+
+.white {
+    color: white;
+}
+
+.darkBrown {
+    color: rgb(108, 85, 69);
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.rounded-full {
+    border-radius: 100%;
+}
+
+.z-auto {
+    z-index: auto;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.circle {
+    width: 500px;
+    height: 600px;
+    top: -330px;
+    right: -40px;
+    background-color: rgba(123, 97, 78, 0.267);
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+    font-weight: inherit;
+}
+
+.mx-5 {
+    margin: 0 1.25rem;
+}
+
+.text-5xl {
+    font-size: 3.5rem;
+    line-height: 5rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.my-7 {
+    margin: 1.75rem 0;
+}
+
+.pY1remX2rem {
+    padding: 1rem 2rem;
+}
+
+.rounded-t-full {
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+
+.mainButtonTransition {
+    transition: background-color 1s ease-in;
+}
+
+.mainButtonTransition:hover {
+    background-color: rgba(139, 95, 62, 0.233);
+    color: rgb(123, 97, 78);
+}
+
+.nicorTxt {
+    transform: translateX(-200px);
+    font-size: 11rem;
+    color: rgba(138, 109, 88, 0.509);
+}
+
+.rounded-b-full {
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}
+
+.w-66 {
+    width: 66%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.border1 {
+    top: -30px;
+    right: 0;
+}
+
+.smallCircle {
+    top: -40px;
+    right: 50px;
+}
+
+.mediumCircle {
+    top: -100px;
+    right: 0px;
+    width: 70px;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.pY1remX1075rem {
+    padding: 1rem 1.75rem;
+}
+
+.buttonTransition {
+    transition: background-color ease-in 1s;
+}
+
+.buttonTransition:hover {
+    background-color: rgb(108, 85, 69);
+    color: white;
+}
+
+.buttonTransition:hover .arrow {
+    right: -110px;
+}
+
+.arrow {
+    top: -27px;
+    right: -68px;
+    transition: right 1s ease-in;
+}
+
+.rounded-ss-full {
+    border-top-left-radius: 40%;
+}
+
+.border2 {
+    top: 20px;
+    right: 0;
+}
+
+hr {
+    width: 20%;
+    margin: 0 40%;
+    transition: border ease-in 1s;
+    border: 1px transparent solid;
+}
+
+h1:hover+hr {
+    border: 1px solid rgb(48, 33, 22);
+}
+
+.mt-90 {
+    margin-top: 90px;
+}
+
+.w-76 {
+    width: 76%;
+}
+
+.dNone {
+    display: none;
+}
+
+.rounded-ee-full {
+    border-bottom-right-radius: 50%;
+}
+
+.h-halfFull {
+    height: 50%;
+}
+
+.m-20 {
+    margin: 70px;
+}
+
+.w-14 {
+    width: 1.8rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.cardTransition {
+    border-radius: 5px;
+    transition: box-shadow ease-in 1s;
+}
+
+.cardTransition:hover {
+    box-shadow: 3px 0px 105px -23px rgb(108, 85, 69);
+}
+
+.grid-cols-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.marginLeft50px {
+    margin-left: 50px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.container {
+    margin: 0 70px;
+}
+
+.marginX {
+    margin: 12% 0;
+}
+
+/* blur cards */
+
+
+.cards .card {
+    transition: 400ms;
+}
+
+.cards .card:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.cards:hover>.card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+}
+
+/* cardshop */
+.shopCard {
+    margin-left: 40px;
+}
+
+.card2 {
+    width: 11.875em;
+    height: 16.5em;
+    transition: all 120ms;
+    padding-bottom: 3.4em;
+}
+
+.card2::after {
+    content: "Add to Cart";
+    padding-top: 1.25em;
+    padding-left: 1.25em;
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    background: rgb(108, 85, 69);
+    color: #fff;
+    height: 2.5em;
+    width: 90%;
+    transition: all 80ms;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.card2 .title {
+    left: 0.625em;
+    bottom: 1.875em;
+    font-weight: 600;
+}
+
+.card2 .price {
+    left: 0.625em;
+    bottom: 0.625em;
+    font-weight: 900;
+}
+
+.card2:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.card2:active {
+    transform: scale(0.98);
+}
+
+.card2:active::after {
+    content: "Added !";
+    height: 3.125em;
+}
+
+.text {
+    max-width: 55px;
+}
+
+.image {
+    place-items: center;
+}
+
+/* testimonial */
+.newsletter-form {
+    max-width: 400px;
+    margin: 5% auto;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.newsletter-form h2 {
+    font-size: 24px;
+}
+
+.newsletter-form label {
+    display: block;
+    color: rgb(95, 78, 67);
+    margin-bottom: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    border-radius: 4px;
+}
+
+.newsletter-form input[type="submit"] {
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(100, 69, 48);
+    color: #fff;
+}
+
+.newsletter-form input[type="submit"]:hover {
+    background-color: rgba(126, 84, 51, 0.233);
+}
+
+/* socialsCard */
+.socialsCard {
+    width: 290px;
+    height: 64px;
+    background: rgb(255, 255, 255);
+}
+
+.socialsCard button {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .tablet img {
+        width: 100%;
+        margin: 0 30px 0 0;
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tabletFont {
+        font-size: 2rem;
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .remove-tablet {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .shopCard {
+        margin-left: 0;
+        overflow-x: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .socialsCard {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
