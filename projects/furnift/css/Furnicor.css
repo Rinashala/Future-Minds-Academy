@@ -435,6 +435,12 @@ main {
 }
 
 @media (max-width: 1080px) {
+
+    a,
+    li {
+        color: rgb(108, 85, 69);
+    }
+
     .tablet img {
         width: 100%;
         margin: 0 30px 0 0;
