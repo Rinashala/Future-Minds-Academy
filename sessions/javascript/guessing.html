@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 class="tries">tries: 3</h3>
+    <label for="">guess a number btw 1-10:</label>
+    <input type="number" id="userNum" value=""><br>
+    <p class="hints"></p>
+    <button onclick="guessNumber()">guess</button>
+    <hr>
+    <h3 class="msg">
+        </h4>
+        <script>
+            let guessedNum = Math.floor(Math.random() * 10) + 1;
+            console.log(guessedNum)
+            const userNum = document.querySelector('#userNum');
+            const hints = document.querySelector('.hints');
+            const msg = document.querySelector('.msg');
+            const tries = document.querySelector('.tries');
+
+            let triesCount = 3;
+            let guessNumber = function () {
+                if (userNum.value < guessedNum) {
+                    hints.textContent = "please guess higher:";
+                }
+                if (userNum.value > guessedNum) {
+                    hints.textContent = 'please guess lower:';
+                }
+                if (userNum.value == guessedNum) {
+                    msg.textContent = 'congratulations';
+                    hints.textContent = '';
+                }
+                else {
+                    if (triesCount == 1) {
+                        msg.textContent = 'you lost';
+                        hints.textContent = '';
+                    }
+
+                }
+
+                triesCount--;
+                tries.textContent = "tries:" + triesCount;
+
+            }
+
+
+            // let guessedNum = Math.floor(Math.random() * 10) + 1;
+            // console.log(guessedNum);
+            // let userNum = prompt('guess a number btw 1-10:');
+            // if (userNum < guessedNum) {
+            //     userNumb = prompt('please guess higher:')
+            // }
+            // if (userNum > guessedNum) { userNumb = prompt('please guess lower:')
+            // }
+            // if (userNum == guessedNum) {
+            //     console.log('congratulations');
+            // }
+            // else {
+            //     console.log('you lost');
+            // }
+        </script>
+</body>
+
+</html>

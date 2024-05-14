@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels and Consonants</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('keypress', handleKeyPress);
+
+        function handleKeyPress(e) {
+            let symbol = e.key;
+            let vowels = 'aeiou';
+            let numbers = '1234567890';
+            let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+            symbol = symbol.toLowerCase();
+
+            if (symbol.length !== 1) {
+                console.log('Please write only a single character.');
+            } else {
+                if (vowels.includes(symbol)) {
+                    console.log(`${symbol} is a vowel.`);
+                } else if (numbers.includes(symbol)) {
+                    console.log(`${symbol} is a number.`);
+                } else if (alphabet.includes(symbol)) {
+                    console.log(`${symbol} is a consonant.`);
+                } else {
+                    console.log(`${symbol} is another symbol.`);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
