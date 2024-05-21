@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boring Calculator</title>
+</head>
+
+<body>
+    <script>
+        let firstNum = parseInt(prompt('Type a number?'));
+        let secondNum = parseInt(prompt('Type your second number?'));
+        let operator = prompt('What operation do you want to apply?').toLowerCase();
+        if (isNaN(firstNum) || isNaN(secondNum)) {
+            throw new Error('Please write a valid number.')
+        }
+        else {
+            let result;
+            switch (operator) {
+                case 'addition':
+                    result = firstNum + secondNum;
+                    break;
+                case 'multiply':
+                    result = firstNum * secondNum;
+                    break;
+                case 'subtract':
+                    result = firstNum - secondNum;
+                    break;
+                case 'divide':
+                    if (secondNum == 0) {
+                        throw new Error("you can't divide by 0")
+                    }
+                    result = firstNum / secondNum;
+                    break;
+                default:
+                    throw new Error('please write a valid operator')
+            }  console.log(`the result is ${result}`);
+
+        }
+
+    </script>
+</body>
+
+</html>
