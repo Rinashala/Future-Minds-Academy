@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+
+<body>
+    <h2>while loop</h2>
+    <h1 class="h"></h1>
+    <h2>for loop</h2>
+    <h1 class="numrat"></h1>
+
+    <script>
+        const h = document.querySelector('.h');
+        let i = 40;
+        while (i >= 0) {
+            i--;
+            h.innerHTML += `${i} `;
+        }
+        const numrat = document.querySelector('.numrat');
+
+        for (let i = 40; i >= 0; i--) {
+            numrat.innerHTML += `${i} `
+        }
+
+    </script>
+</body>
+
+</html>

@@ -39,9 +39,9 @@
 
         let alloptions = "";
         for (let i = 0; i <= 30; i++) {
-            if (i == 0) { alloptions += `<options value='off'>off</options>`; }
+            if (i == 0) { alloptions += `<options value="off">off</options>`; }
             else {
-                alloptions += `<option value="${i}">${i}</options>;`
+                alloptions += `<option value="${i}">${i}</options>`;
             }
         }
         tempSelect.innerHTML = alloptions;
