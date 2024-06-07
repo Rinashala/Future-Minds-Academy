@@ -1,26 +1,32 @@
 let seasons;
-function onload(seasons) {
-    if (seasons == spring) {
-        ImageUrl = 'assets/images/spring.png'
-        title = 'Welcome to spring'
-    }
-    if (seasons == summer) {
-        ImageUrl = 'assets/images/summer.png'
-        title = 'Welcome to summer'
+let title = document.querySelector('.title');
+let ImageUrl = document.querySelector('img')
+let imgContainer = document.querySelector('.imgConatiner')
+function loadPage(seasons) {
 
-    } if (seasons == fall) {
-        ImageUrl = 'assets/images/fall.png'
-        title = 'Welcome to fall'
-
-    } if (seasons == winter) {
-        ImageUrl = 'assets/images/winter.png'
-        title = 'Welcome to winter'
+    console.log(seasons);
+    if (seasons == 'spring') {
+        ImageUrl.src = 'assets/images/spring.png'
+        title.textContent = 'Welcome to spring'
     }
-    if (seasons == allSeasons) {
-        ImageUrl = 'assets/images/sprnig.png'
-        ImageUrl = 'assets/images/summer.png'
-        ImageUrl = 'assets/images/fall.png'
-        ImageUrl = 'assets/images/winter.png'
+    if (seasons == 'summer') {
+        ImageUrl.src = 'assets/images/summer.png'
+        title.textContent = 'Welcome to summer'
+
+    } if (seasons == 'fall') {
+        ImageUrl.src = 'assets/images/fall.png'
+        title.textContent = 'Welcome to fall'
+
+    } if (seasons == 'winter') {
+        ImageUrl.src = 'assets/images/winter.png'
+        title.textContent = 'Welcome to winter'
+    }
+    if (seasons == 'allSeasons') {
+        imgContainer.innerHTML = `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" />
+        <img class="img-xxl" src="assets/images/summer.png" alt="Spring" />
+        <img class="img-xxl" src="assets/images/fall.png" alt="Spring" />
+        <img class="img-xxl" src="assets/images/winter.png" alt="Spring" />`
+        title.textContent = 'Welcome to all seasons'
     }
 
 }
