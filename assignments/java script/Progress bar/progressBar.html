@@ -77,6 +77,8 @@
 
     </div>
     <script>let percentage = parseInt(prompt('What is the progress?'));
+        let tooltip = document.querySelector('.tooltip')
+        let progressBar = document.getElementById('bar');
         if (isNaN(percentage) || percentage < 0 || percentage > 100)
             throw new Error('Write a valid percentage!');
         let color;
@@ -88,10 +90,9 @@
             color = 'pink'
         else
             color = 'green';
-        let progressBar = document.getElementById('bar');
+
         progressBar.style.backgroundColor = color;
         progressBar.style.height = `${percentage}%`;
-        let tooltip = document.querySelector('.tooltip')
         tooltip.innerHTML = `${percentage}%`;
     </script>
 

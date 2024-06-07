@@ -5,7 +5,7 @@ bgGame.src = 'images/background.png';
 
 let bgReady = false;
 let timer = 15;
-
+let points = 0;
 bgGame.onload = function () {
     bgReady = true;
 }
@@ -14,6 +14,8 @@ let catObj = {};
 catObj.x = 0;
 catObj.y = 40;
 catObj.speed = 5;
+catObj.width = 120;
+catObj.height = 128;
 
 let catReady = false;
 const catImg = new Image();
@@ -27,7 +29,7 @@ mouseObj.width = 52;
 mouseObj.height = 54;
 
 mouseObj.x = Math.floor(Math.random() * 460);
-mouseObj.y = Math.floor(Math.random() * 426);
+mouseObj.y = 30 + Math.floor(Math.random() * 396);
 
 let mouseReady = false;
 const mouseImg = new Image();
@@ -46,31 +48,42 @@ function render() {
     if (mouseReady) {
         ctx.drawImage(mouseImg, mouseObj.x, mouseObj.y)
     }
-    if (catObj.x > 500) {
-        catObj.x = -50;
+    if (catObj.x > 500) { catObj.x = -50; }
+    if (catObj.x < -51) { catObj.x = 499; }
+    if (catObj.y > 460) { catObj.y = -50; }
+    if (catObj.y < 40) { catObj.y = 41; }
+
+    if ((catObj.x + catObj.width) > mouseObj.x
+        && (catObj.y + catObj.height) > mouseObj.y
+        && (catObj.x + 15) < (mouseObj.x + mouseObj.width)
+        && catObj.y + 10 < (mouseObj.y + mouseObj.height)) {
+        mousePos(); if (timer != 0) { points++; }
     }
-    if (catObj.x < -51) {
-        catObj.x = 499;
-    }
-    if (catObj.y > 460) {
-        catObj.y = -50;
-    }
-    if (catObj.y < 40) {
-        catObj.y = 41;
+    if (timer == 0) {
+        mouseObj.x = 3000;
+        if (points >= 3) {
+            ctx.fillStyle = 'white';
+            ctx.fillText("you win ", 220, 200);
+        } else {
+            ctx.fillStyle = 'red';
+            ctx.fillText("You lose ", 220, 200);
+        }
+
     }
     ctx.font = "20px Georgia";
-    ctx.fillText("points : 0", 10, 25);
     ctx.fillStyle = 'white';
-
+    ctx.fillText("points : " + points, 10, 25);
     ctx.fillText("timer : " + timer, 400, 25);
-
 };
 
 function time() {
-    timer--;
+    if (timer == 0) {
+        clearInterval(timeRunner);
+    }
+    else { timer--; }
 }
+
 addEventListener('keydown', function (e) {
-    console.log(e.key);
     if (e.key == 'ArrowRight') {
         catObj.x += catObj.speed
     }
@@ -84,6 +97,9 @@ addEventListener('keydown', function (e) {
         catObj.y -= catObj.speed
     }
 });
-
-setInterval(render, 1);
-setInterval(time, 1000);
+function mousePos() {
+    mouseObj.x = Math.floor(Math.random() * 460);
+    mouseObj.y = 30 + Math.floor(Math.random() * 396);
+}
+const renderFrame = setInterval(render, 1);
+const timeRunner = setInterval(time, 1000);
