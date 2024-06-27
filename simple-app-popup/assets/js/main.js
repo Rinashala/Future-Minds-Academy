@@ -1,7 +1,8 @@
 let seasons;
 let title = document.querySelector('.title');
 let ImageUrl = document.querySelector('img')
-let imgContainer = document.querySelector('.imgConatiner')
+let imgContainer = document.querySelector('.imgContainer');
+
 function loadPage(seasons) {
 
     console.log(seasons);
@@ -22,11 +23,12 @@ function loadPage(seasons) {
         title.textContent = 'Welcome to winter'
     }
     if (seasons == 'allSeasons') {
-        imgContainer.innerHTML = `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" />
-        <img class="img-xxl" src="assets/images/summer.png" alt="Spring" />
-        <img class="img-xxl" src="assets/images/fall.png" alt="Spring" />
-        <img class="img-xxl" src="assets/images/winter.png" alt="Spring" />`
-        title.textContent = 'Welcome to all seasons'
+        title.textContent = 'Welcome to all seasons';
+        imgContainer.innerHTML += `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" /> `
+        imgContainer.innerHTML += `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" /> `
+        imgContainer.innerHTML += `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" /> `
+        imgContainer.innerHTML += `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" /> `
+
     }
 
 }

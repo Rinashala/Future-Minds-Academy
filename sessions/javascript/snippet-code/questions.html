@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>quiz 1</h1>
+    <ol id="questionList">
+
+    </ol>
+    <script src="questions.js"> </script>
+    <script>
+        const questionList = document.querySelector('#questionList');
+        let questionHtml = '';
+        for (let i = 0; i < allQuestion.length; i++) {
+            questionHtml += `
+            <li>${allQuestion[i].question}
+                <ol type="a">
+                    <li><a href="#">${allQuestion[i].options[0]}</a></li> 
+                    <li><a href="#">${allQuestion[i].options[1]}</a></li>
+                     <li><a href="#">${allQuestion[i].options[2]}</a></li>
+                     <li><a href="#">${allQuestion[i].options[3]}</a></li>
+                </ol>
+            </li>
+            `;
+        }
+        questionList.innerHTML = questionHtml;
+    </script>
+</body>
+
+</html>
