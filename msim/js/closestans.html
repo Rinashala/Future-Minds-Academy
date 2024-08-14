@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: black;
+            width: 30%;
+        }
+
+        .box2 {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .p1 {
+            background-color: brown;
+            padding: 20px;
+        }
+
+        .p2 {
+            background-color: aquamarine;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>closest answer is <span class="winner"></span></h1>
+        <div class="box2">
+            <div class="p1">
+                <h1>player1 </h1>
+                <h1 class="nOne"></h1>
+            </div>
+            <div class="p2">
+                <h1>player2 </h1>
+                <h1 class="nTwo"></h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        let answer = Math.floor(Math.random() * 20) + 1;
+        let num1 = document.querySelector(".nOne");
+        let num2 = document.querySelector(".nTwo");
+        let user1 = parseInt(prompt("type a number"));
+        let user2 = parseInt(prompt("type a second number"));
+        let winner = document.querySelector(".winner")
+        let boxone = document.querySelector(".p1");
+        let boxtwo = document.querySelector(".p2");
+
+        if (isNaN(user1) || isNaN(user2)) {
+            throw new Error("please write a valid number")
+        }
+        num1.innerHTML = user1;
+        num2.innerHTML = user2;
+        console.log(answer);
+        podistance = Math.abs(answer - user1);
+        ptdistance = Math.abs(answer - user2);
+        if (podistance < ptdistance) {
+            winner.innerHTML = "numb 1"
+            boxone.style.backgroundColor = "green"
+            boxtwo.style.backgroundColor = "red"
+        }
+        else {
+            winner.innerHTML = "numb 2"
+            boxtwo.style.backgroundColor = "green";
+            boxone.style.backgroundColor = "red"
+
+        }
+        if (podistance == ptdistance) {
+            boxtwo.style.backgroundColor = "orange";
+            boxone.style.backgroundColor = "orange"
+            winner.innerHTML = "tie"
+        }
+
+    </script>
+</body>
+
+</html>
