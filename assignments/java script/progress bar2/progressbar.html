@@ -93,8 +93,8 @@
         }
 
         function modifyProgressBar(percentage, color) {
-            const progressBar = document.getElementById('bar');
-            const tooltip = document.querySelector('.tooltip');
+            let progressBar = document.getElementById('bar');
+            let tooltip = document.querySelector('.tooltip');
             progressBar.style.height = `${percentage}%`;
             progressBar.style.backgroundColor = color;
             tooltip.innerHTML = `${percentage}%`;
@@ -104,12 +104,12 @@
             if (!isValidPercentage(percentage)) {
                 throw new Error('Write a valid percentage!');
             }
-            const color = getProgressColor(percentage);
+            let color = getProgressColor(percentage);
             modifyProgressBar(percentage, color);
         }
 
         setInterval(() => {
-            const randomPercentage = Math.floor(Math.random() * 101);
+            let randomPercentage = Math.floor(Math.random() * 101);
             setProgress(randomPercentage);
         }, 2000);
     </script>

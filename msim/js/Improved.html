@@ -77,38 +77,44 @@
 
     </div>
     <script>
-        let tooltip = document.querySelector('.tooltip')
-        let progressBar = document.getElementById('bar');
-        let percentage = parseInt(prompt('What is the progress?'));
-        let color;
-        function getProgressColor() {
-            return (modifyProgressBar);
-            if (isNaN(percentage) || percentage < 0 || percentage > 100)
-                throw new Error('Write a valid percentage!');
-            if (percentage <= 20)
-                color = 'darkred';
-            else if (percentage <= 50)
-                color = 'orange';
-            else if (percentage <= 80)
-                color = 'pink'
-            else
-                color = 'green';
+        function isValidPercentage(num) {
+            return !isNaN(num) && num >= 0 && num <= 100;
+            console.log(num)
         }
-        function modifyProgressBar() {
+
+        function getProgressColor(num) {
+
+            if (num <= 20)
+                return 'darkred';
+            else if (num <= 50)
+                return 'orange';
+            else if (num <= 80)
+                return 'pink'
+            else
+                return 'green';
+        }
+        function modifyProgressBar(num, color) {
+            let tooltip = document.querySelector('.tooltip')
+            let progressBar = document.getElementById('bar');
 
             progressBar.style.backgroundColor = color;
-            progressBar.style.height = `${percentage}%`;
-            tooltip.innerHTML = `${percentage}%`;
+            progressBar.style.height = `${num}%`;
+            tooltip.innerHTML = `${num}%`;
+            tooltip.style.display = 'block';
         }
-        function isValidPrecentage() {
-            if (percentage > 0 && percentage < 100) {
-                percentage = true;
-
+        function setProcess(num) {
+            if (isValidPercentage(num)) {
+                let color = getProgressColor(num);
+                modifyProgressBar(num, color)
             }
-            console.log(percentage)
+            else {
+                throw new Error("invalid percentage")
+            }
         }
-        getProgressColor();
-        isValidPrecentage();
+        setInterval(() => {
+            let percentage = Math.floor(Math.random() * 101);
+            setProcess(percentage);
+        }, 2000)
 
     </script>
 
