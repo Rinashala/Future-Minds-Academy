@@ -10,9 +10,8 @@ function startNotification(text) {
 
     interval = setInterval(() => {
         document.title = document.title === text ? originalTitle : text;
-
         let favicon = document.querySelector('link[rel="icon"]');
-        favicon.href = favicon.href === originalFavicon ? "assets/img/4.webp?v=" + new Date().getTime() : originalFavicon;
+        favicon.href = favicon.href === originalFavicon ? "assets/img/4.webp?v=" : originalFavicon;
     }, 1000);
 }
 
