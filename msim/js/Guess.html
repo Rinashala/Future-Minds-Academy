@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess</title>
+</head>
+
+<body>
+    <script>
+        let random = Math.floor(Math.random() * 6) + 1;
+        console.log(random);
+        let user;
+        let i = 0;
+        do {
+            user = parseInt(prompt("type"))
+            i++;
+        }
+        while (isNaN(user) || user != random);
+        console.log(user);
+        if (i > 1) {
+            alert(`Congratulations, you guessed the correct number in ${i} tries`);
+        }
+        else {
+            alert(`Congratulations, you guessed the correct number in 1 try`);
+        }
+
+    </script>
+</body>
+
+</html>
