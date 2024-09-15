@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Array</title>
+</head>
+
+<body>
+    <script>
+        let taskList;
+        let userTasks;
+        let list;
+        for (let i = 0; i < 5; i++) {
+            userTasks = prompt("Write a task for today");
+            taskList = [{
+                todaysTask: `${userTasks}`
+            }];
+            list = document.createElement("ul");
+            document.body.appendChild(list);
+            taskList.forEach((task) => {
+                listing = document.createElement("li");
+                list.appendChild(listing);
+                listing.textContent = `${userTasks}`;
+            });
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Dimensions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        .verticalParagraph {
+            rotate: -90deg;
+            width: 30px;
+        }
+
+        .box {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let width = parseInt(prompt("width?"));
+        let length = parseInt(prompt("length?"));
+        if (isNaN(width) || isNaN(length)) {
+            throw new Error("please write a valid number!")
+        }
+        if (width < length) {
+            let swap = width;
+            width = length;
+            length = swap;
+        };
+
+        let widthDimension = document.createElement("p");
+        widthDimension.classList.add("verticalParagraph");
+        widthDimension.textContent = width + "m";
+        widthDimension.style.marginLeft = "92%";
+        document.body.appendChild(widthDimension);
+
+        let container = document.createElement("div");
+        container.classList.add("container")
+        document.body.appendChild(container);
+
+        let lengthDimension = document.createElement("p");
+        lengthDimension.classList.add("horizontalParagraph");
+        lengthDimension.textContent = length + "m";
+        container.appendChild(lengthDimension);
+
+        let box = document.createElement("div");
+        box.style.backgroundColor = "rgb(125, 158, 209)"
+        box.classList.add("box")
+        container.appendChild(box);
+
+
+        let area = width * length;
+        box.style.width = area + "rem";
+        areaDimension = document.createElement("h1");
+        areaDimension.textContent = "area:" + area + "m2";
+        areaDimension.classList.add("calculatedDimensions");
+        areaDimension.style.alignSelf = "end";
+        box.appendChild(areaDimension);
+
+        let perimeter = 2 * width + 2 * length;
+        box.style.height = perimeter + "rem";
+        perimeterDimension = document.createElement("h1");
+        perimeterDimension.textContent = "perimeter:" + perimeter + "m"
+        perimeterDimension.style.alignSelf = "start";
+        perimeterDimension.classList.add("calculatedDimensions");
+        box.appendChild(perimeterDimension);
+
+        let secondLengthDimension = document.createElement("p");
+        secondLengthDimension.classList.add("horizontalParagraph");
+        secondLengthDimension.textContent = length + "m";
+        container.appendChild(secondLengthDimension);
+
+        let secondWidthDimension = document.createElement("p");
+        secondWidthDimension.classList.add("verticalParagraph");
+        secondWidthDimension.textContent = width + "m";
+        document.body.appendChild(secondWidthDimension);
+
+    </script>
+</body>
+
+</html>

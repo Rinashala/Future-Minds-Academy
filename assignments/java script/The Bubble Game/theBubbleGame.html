@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bubble game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            position: relative;
+        }
+
+        .bubbles {
+            position: fixed;
+            gap: 5px;
+            border-radius: 50%;
+        }
+
+        .animation {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 1;
+                transform: translateY(20px);
+
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(0);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        for (i = 0; i < 301; i++) {
+            let bubble = document.createElement("div");
+            bubble.classList.add("bubbles");
+            document.body.appendChild(bubble);
+            size = Math.random() * 100 + "px";
+            bubble.style.width = size;
+            bubble.style.height = size;
+            bubble.style.backgroundColor = `rgb(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`;
+            bubble.style.top = Math.random() * window.innerHeight + "px";
+            bubble.style.left = Math.random() * window.innerWidth + "px";
+        }
+        document.addEventListener("click", (event) => {
+            if (event.target.classList.contains("bubbles")) {
+                event.target.classList.add("animation");
+
+                event.target.addEventListener('animationend', () => {
+                    event.target.remove();
+                    win();
+                });
+            }
+        });
+        function win() {
+            if (document.querySelectorAll('.bubbles').length === 0) {
+                alert("Congratulations! You've popped all the bubbles!");
+            }
+        };
+
+    </script>
+</body>
+
+</html>

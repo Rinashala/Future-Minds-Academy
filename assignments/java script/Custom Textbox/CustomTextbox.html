@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Textbox</title>
+</head>
+
+<body>
+    <script>
+        let textBox = document.createElement("div");
+        document.body.appendChild(textBox);
+        textBox.style.backgroundColor = "black";
+        textBox.textContent = "";
+
+        let placeholder = document.createElement("p");
+        textBox.appendChild(placeholder);
+        placeholder.style.color = "grey";
+        placeholder.innerHTML = "start typing...";
+
+
+        document.addEventListener("keydown", (event) => {
+            placeholder.innerHTML = "";
+
+            if (event.key !== "Backspace") {
+                textBox.style.color = "white";
+                let input = event.key;
+                textBox.textContent += input;
+            }
+            else {
+                textBox.textContent = textBox.textContent.slice(0, -1);
+                event.preventDefault();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

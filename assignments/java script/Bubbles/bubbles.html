@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            position: relative;
+        }
+
+        .bubbles {
+            position: fixed;
+            gap: 5px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        for (i = 0; i < 301; i++) {
+            let div = document.createElement("div");
+            div.classList.add("bubbles");
+            document.body.appendChild(div);
+            size = Math.random() * 100 + "px";
+            div.style.width = size;
+            div.style.height = size;
+            div.style.backgroundColor = `rgb(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`;
+            div.style.top = Math.random() * window.innerHeight + "px";
+            div.style.left = Math.random() * window.innerWidth + "px";
+        }
+
+    </script>
+</body>
+
+</html>

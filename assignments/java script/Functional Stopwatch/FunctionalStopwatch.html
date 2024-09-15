@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Stopwatch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background-color: rgb(29, 28, 28);
+            display: flex;
+            justify-content: center;
+        }
+
+        #timeDisplay {
+            font-size: 9rem;
+            color: white;
+            font-weight: 300;
+        }
+
+        .btnContainer {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            gap: 2rem;
+        }
+
+        button {
+            border-radius: 10px;
+            width: 50%;
+            height: 2rem;
+        }
+
+        table {
+            width: 100%;
+            color: gray;
+            text-align: center;
+        }
+
+        table td {
+            color: aliceblue;
+        }
+
+        #timeContainer {
+            display: grid;
+            margin: 2rem;
+        }
+
+        #resetBtn {
+            background-color: gray;
+            border: 1px transparent solid;
+            color: white;
+        }
+
+        #startBtn {
+            background-color: rgb(42, 104, 42);
+            color: white;
+            border: 1px transparent solid;
+        }
+
+        #stopBtn {
+            background-color: red;
+            color: white;
+            border: 1px transparent solid;
+        }
+
+        #lapBtn {
+            background-color: grey;
+            color: white;
+            border: 1px transparent solid;
+        }
+
+        .firstBtnContainer {
+            display: contents;
+        }
+
+        .secondBtnContainer {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="timeContainer">
+        <div>
+            <h1 id="timeDisplay"> 00:00:00</h1>
+            <table>
+                <thead>
+                    <th>Lap No.</th>
+                    <th>Split</th>
+                    <th>Total</th>
+                </thead>
+                <tbody class="lapTable">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="btnContainer">
+            <div class="firstBtnContainer">
+                <button id="resetBtn" class="timerBtn">Reset</button>
+                <button id="startBtn" class="timerBtn">Start</button>
+            </div>
+            <div class="secondBtnContainer">
+                <button id="lapBtn" class="timerBtn">Lap</button>
+                <button id="stopBtn" class="timerBtn">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let timeDisplay = document.querySelector("#timeDisplay");
+        let resetBtn = document.querySelector("#resetBtn");
+        let startBtn = document.querySelector("#startBtn");
+        let stopBtn = document.querySelector("#stopBtn");
+        let lapBtn = document.querySelector("#lapBtn");
+        let secondBtnContainer = document.querySelector(".secondBtnContainer");
+        let firstBtnContainer = document.querySelector(".firstBtnContainer");
+        let lapTable = document.querySelector(".lapTable");
+
+
+        let elapsedTime = 0;
+        let startTime = 0;
+        let lapCounter = 0;
+        let previousLapTime = 0;
+        let IntervalId;
+
+        let hrs;
+        let mins;
+        let secs;
+
+        startBtn.addEventListener("click", () => {
+            firstBtnContainer.style.display = "none";
+            secondBtnContainer.style.display = "contents";
+            startTime = Date.now() - elapsedTime;
+            IntervalId = setInterval(time, 1000);
+        });
+        stopBtn.addEventListener("click", () => {
+            clearInterval(IntervalId);
+            firstBtnContainer.style.display = "contents";
+            secondBtnContainer.style.display = "none";
+        });
+        resetBtn.addEventListener("click", () => {
+            clearInterval(IntervalId);
+            startTime = 0;
+            elapsedTime = 0;
+            lapCounter = 0;
+            previousLapTime = 0;
+            timeDisplay.textContent = "00:00:00";
+            lapTable.innerHTML = "";
+        });
+        function time() {
+            elapsedTime = Date.now() - startTime;
+            secs = Math.floor((elapsedTime / 1000) % 60);
+            mins = Math.floor((elapsedTime / (1000 * 60)) % 60);
+            hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 24);
+            secs = secs < 10 ? "0" + secs : secs;
+            mins = mins < 10 ? "0" + mins : mins;
+            hrs = hrs < 10 ? "0" + hrs : hrs;
+            timeDisplay.textContent = `${hrs}:${mins}:${secs}`
+        };
+        lapBtn.addEventListener("click", () => {
+            lapCounter++;
+            let currentLapTime = elapsedTime;
+            let splitTime = currentLapTime - previousLapTime;
+            previousLapTime = currentLapTime;
+
+            let splitSecs = Math.floor((splitTime / 1000) % 60);
+            let splitMins = Math.floor((splitTime / (1000 * 60)) % 60);
+            let splitHrs = Math.floor((splitTime / (1000 * 60 * 60)) % 24);
+            splitSecs = splitSecs < 10 ? "0" + splitSecs : splitSecs;
+            splitMins = splitMins < 10 ? "0" + splitMins : splitMins;
+            splitHrs = splitHrs < 10 ? "0" + splitHrs : splitHrs;
+
+            lapTable.innerHTML += `<tr class="">
+               <td>Lap ${lapCounter}</td><td>${splitHrs}:${splitMins}:${splitSecs}</td><td>${hrs}:${mins}:${secs}</td> </tr>`;
+        });
+
+
+
+    </script>
+</body>
+
+</html>

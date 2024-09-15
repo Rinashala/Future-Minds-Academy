@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Tasks</title>
+    <style>
+        body {
+            background-color: rgb(134, 176, 213);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let todaysDate = document.createElement("h1");
+        let today = new Date().toLocaleDateString();
+        let userTask;
+        let tasks;
+        document.body.appendChild(todaysDate);
+        todaysDate.textContent = `Tasks for ${today}`;
+        todaysDate.style.color = "white";
+        todaysDate.style.fontSize = "4rem";
+        while (true) {
+            userTask = prompt("Please write today's task. When you are done, leave an empty response!");
+            if (userTask === "" || userTask === null) {
+                break;
+
+            }
+            tasks = document.createElement("p");
+            tasks.textContent = userTask;
+            document.body.appendChild(tasks);
+            tasks.style.color = "white";
+        }
+
+    </script>
+</body>
+
+</html>

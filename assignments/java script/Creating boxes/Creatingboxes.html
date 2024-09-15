@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating boxes</title>
+</head>
+
+<body>
+    <script>
+        let currentBox = null;
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        function createBox(event) {
+            if (event.target.tagName === 'DIV') return;
+
+            let box = document.createElement("div");
+            document.body.appendChild(box);
+            box.style.width = "100px";
+            box.style.height = "100px";
+            box.style.border = "2px solid black";
+            box.style.position = "fixed";
+            let left = event.clientX;
+            let top = event.clientY;
+            box.style.left = left + "px";
+            box.style.top = top + "px";
+            box.style.transform = `rotate(${Math.random() * 180}deg)`;
+            box.addEventListener("mousedown", (e) => startDragging(e, box));
+        }
+        function startDragging(event, box) {
+            isDragging = true;
+            currentBox = box;
+
+            const rect = currentBox.getBoundingClientRect();
+            offsetX = event.clientX - rect.left;
+            offsetY = event.clientY - rect.top;
+
+            event.preventDefault();
+        }
+
+        function moveBox(event) {
+            if (isDragging && currentBox) {
+                let left = event.clientX - offsetX;
+                let top = event.clientY - offsetY;
+                currentBox.style.left = left + "px";
+                currentBox.style.top = top + "px";
+            }
+        }
+
+        function stopDragging() {
+            isDragging = false;
+            currentBox = null;
+        }
+
+        document.addEventListener("click", createBox);
+        document.addEventListener("mousemove", moveBox);
+        document.addEventListener("mouseup", stopDragging); 
+    </script>
+</body>
+
+</html>

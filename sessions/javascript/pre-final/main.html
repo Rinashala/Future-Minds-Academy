@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre Final</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        p {
+            border: 2px solid gray;
+            padding: 20px;
+            width: 500px;
+        }
+
+        textarea {
+            width: 500px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Hide Box</button>
+    <button class="red">red</button>
+    <button class="blue">blue</button>
+    <p class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt animi, ratione reiciendis est nemo
+        sapiente,
+        mollitia aperiam debitis, distinctio perferendis atque consequuntur. Quibusdam atque cupiditate, iusto
+        temporibus placeat velit cumque!</p>
+    <textarea name="movetotop" id="movetotop"></textarea><br>
+    <button id="movetotopBtn">move to top</button>
+    <script>
+        let btn = document.querySelector(".btn");
+        let blue = document.querySelector(".blue");
+        let red = document.querySelector(".red");
+        let box = document.querySelector(".box");
+        let movetotopBtn = document.querySelector("#movetotopBtn");
+        let movetotop = document.querySelector("#movetotop");
+
+        btn.addEventListener("click", () => {
+            box.style.display = "none";
+            btn.textContent = "show box";
+            if (btn.textContent = "show box") {
+                btn.addEventListener("click", () => {
+                    box.style.display = "block";
+                    btn.textContent = "hide box"
+                });
+            };
+        });
+        blue.addEventListener("click", () => {
+            box.style.backgroundColor = "blue"
+        });
+        red.addEventListener("click", () => {
+            box.style.backgroundColor = "red"
+        });
+        movetotopBtn.addEventListener("click", () => {
+            box.textContent = movetotop.value
+        });
+    </script>
+</body>
+
+</html>

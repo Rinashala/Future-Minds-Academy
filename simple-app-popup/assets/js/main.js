@@ -1,34 +1,27 @@
-let seasons;
-let title = document.querySelector('.title');
-let ImageUrl = document.querySelector('img')
-let imgContainer = document.querySelector('.imgContainer');
+const spring = document.querySelector(".spring");
+const summer = document.querySelector(".summer");
+const winter = document.querySelector(".winter");
+const fall = document.querySelector(".fall");
+const allSeasons = document.querySelector(".allSeasons");
+const title = document.querySelector(".title");
+const imgContainer = document.querySelector(".imgContainer");
 
-function loadPage(seasons) {
-
-    console.log(seasons);
-    if (seasons == 'spring') {
-        ImageUrl.src = 'assets/images/spring.png'
-        title.textContent = 'Welcome to spring'
-    }
-    if (seasons == 'summer') {
-        ImageUrl.src = 'assets/images/summer.png'
-        title.textContent = 'Welcome to summer'
-
-    } if (seasons == 'fall') {
-        ImageUrl.src = 'assets/images/fall.png'
-        title.textContent = 'Welcome to fall'
-
-    } if (seasons == 'winter') {
-        ImageUrl.src = 'assets/images/winter.png'
-        title.textContent = 'Welcome to winter'
-    }
-    if (seasons == 'allSeasons') {
-        title.textContent = 'Welcome to all seasons';
-        imgContainer.innerHTML += `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" /> `
-        imgContainer.innerHTML += `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" /> `
-        imgContainer.innerHTML += `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" /> `
-        imgContainer.innerHTML += `<img class="img-xxl" src="assets/images/spring.png" alt="Spring" /> `
-
-    }
-
+function changeSeason(season, imagePath) {
+    imgContainer.innerHTML = `<img class="img-xxl seasonImg" src="${imagePath}" alt="${season}"/>`;
+    title.textContent = season;
 }
+
+spring.addEventListener("click", () => changeSeason("spring", "assets/images/spring.png"));
+summer.addEventListener("click", () => changeSeason("summer", "assets/images/summer.png"));
+winter.addEventListener("click", () => changeSeason("winter", "assets/images/winter.png"));
+fall.addEventListener("click", () => changeSeason("fall", "assets/images/fall.png"));
+
+allSeasons.addEventListener("click", () => {
+    title.textContent = "all seasons";
+    imgContainer.innerHTML = `
+        <img class="img-xxl seasonImg" src="assets/images/spring.png" alt="Spring"/>
+        <img class="img-xxl seasonImg" src="assets/images/summer.png" alt="Summer"/>
+        <img class="img-xxl seasonImg" src="assets/images/winter.png" alt="Winter"/>
+        <img class="img-xxl seasonImg" src="assets/images/fall.png" alt="Fall"/>
+    `;
+});

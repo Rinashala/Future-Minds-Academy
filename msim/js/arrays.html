@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+</head>
+
+<body>
+    <script>
+        let products = [
+            {
+                emri: "rina",
+                mbiemri: "shala",
+                age: 18
+            },
+            {
+                emri: "riona",
+                mbiemri: "shala",
+                age: 25
+            }
+        ];
+        products[0].emri += "rina";
+        console.log(products[0].emri);
+        products.push({
+            emri: "viola",
+            mbiemri: "shala",
+            age: 28
+        });
+        let lastProduct = products.pop();
+
+        products.forEach((product) => {
+            console.log(product.emri);
+        });
+        // veq qka thot kondita
+        let filteredProducts = products.filter(product => product.age > 20);
+        console.log("Filtered products:", filteredProducts);
+        console.log("Original products array:", products);
+        // me fshi
+        let removedProduct = products.splice(1, 1);
+
+        console.log("Removed product:", removedProduct);
+        console.log("Updated products array:", products);
+
+        // Add a new product at index 1
+        products.splice(1, 0, {
+            emri: "newname",
+            mbiemri: "lastname",
+            age: 30
+        });
+        products[3] = {
+            emri: "elsa",
+            mbiemri: "shala",
+            age: 23
+        }
+        console.log("Products after adding new product:", products);
+
+        Numbers = [1, 2, 3, 4];
+        let result = Numbers.find((numberr) => numberr < 2);
+        console.log(result)
+        // Numbers.forEach(double);
+        // function double(element, index, array) {
+        //     array[index] = element * 2;
+        // }
+        // Numbers.forEach((num) => {
+        //     console.log(num)
+        // })
+        let sum = Numbers.reduce((sum, number) => sum += number, 0);
+        // 0 o se i shtohet qesaj sum se ktu na duhen dy argumente e nese e bojna 1 psh ish kon sum+1
+        console.log(sum);
+        Numbers = Numbers.map((number) => number * 2);
+        products = products.sort((a, b) => {
+            if (a.age < b.age) {
+                return - 1;
+            } else if (a.age > b.age) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+        // The custom sorting function (a, b) => { ... } determines the order of the elements by comparing the age property of each element.
+        // If a.age < b.age, the result is negative, placing a before b.
+        // If a.age > b.age, the result is positive, placing b before a.
+        // If a.age === b.age, the result is 0, leaving the order unchanged.
+    </script>
+</body>
+
+</html>

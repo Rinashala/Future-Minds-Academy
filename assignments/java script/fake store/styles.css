@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin: 4rem;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.EcommerceTitle {
+    text-align: center;
+}

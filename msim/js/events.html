@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="list">
+        <li onclick="this.classList.add('highlight')"></li>
+    </ul>
+    <button class="btn"></button>
+    <script>
+        let btn = document.querySelector(".btn");
+        function button() {
+            btn.style.backgroundColor = "red";
+        }
+        btn.addEventListener("click", button);
+        btn.removeEventListener("click", button);
+
+        document.addEventListener("keypress", (event) => {
+            let char = event.key;
+            console.log(char)
+        })
+        document.addEventListener("click", (event) => {
+            console.log(event.clientX);
+            console.log(event.clientY);
+        });
+
+        let list = document.querySelector(".list");
+        list.addEventListener("click", (event => {
+            if (event.target.tagName == "LI") {
+                event.target.toggle("highlight");
+            }
+        }));
+
+    </script>
+</body>
+
+</html>
