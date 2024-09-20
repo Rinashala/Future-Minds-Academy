@@ -93,8 +93,15 @@ catch (e) {
 finally {
     console.log("you did it")
 }
+// IIFE
 let IIFE = (function (a, b) {
     let sum = a + b;
     return sum;
 }(3, 4))
+let IIFEstring = (function (a, b) {
+    let message = "rina ma e mira";
+    console.log(message);
+}())
 // IIFE are functions that are created and invoked immediately they can't be called again. 
+console.error(error)
+// e bon consolen tkuqe
