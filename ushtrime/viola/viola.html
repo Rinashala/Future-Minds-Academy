@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3e6ff;
+        }
+
+        .gift-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #6a0dad;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, opacity 0.5s ease;
+        }
+
+        .gift-container:hover {
+            transform: scale(1.1);
+        }
+
+        .ribbon-horizontal {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 20px;
+            background-color: #ffffff;
+            transform: translateY(-50%);
+        }
+
+        .ribbon-vertical {
+            position: absolute;
+            left: 50%;
+            width: 20px;
+            height: 100%;
+            background-color: #ffffff;
+            transform: translateX(-50%);
+        }
+
+        .lid {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #9400d3;
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gift-container:hover .lid {
+            transform: translateY(-80px);
+        }
+
+        .content {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scaleY(0);
+            transition: transform 0.3s ease-in-out 0.3s;
+        }
+
+        .gift-container:hover .content {
+            transform: scaleY(1);
+        }
+
+        /* Flowers image */
+        .flowers {
+            text-align: center;
+            text-shadow: #6a0dad;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('./urim.png');
+            /* Sample flower image */
+            background-size: cover;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        /* Hidden at first */
+        .birthday-message {
+            display: none;
+            text-align: center;
+            font-size: 3rem;
+            color: #6a0dad;
+            font-family: 'Comic Sans MS', sans-serif;
+        }
+
+        .popImage {
+            animation: pop .5s ease-in-out forwards;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .birthday-message h1 {
+                margin-top: 8rem;
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- First Gift Box -->
+    <div class="gift-container" id="gift">
+        <div class="lid"></div>
+        <div class="ribbon-horizontal"></div>
+        <div class="ribbon-vertical"></div>
+        <div class="content">
+            <div class="flowers" id="flowers">Click</div>
+        </div>
+    </div>
+
+    <!-- Second Birthday Message and Image Popup -->
+    <div class="birthday-message" id="birthdayMessage">
+        <h1>Happy Birthday!</h1>
+        <div class="popImage">
+            <img src="./violaimg/Screenshots/Pamja e çastit 2024-10-02 005021.png" alt="" width="150px">
+            <img src="./violaimg/Screenshots/Pamja e çastit 2024-10-02 005203.png" alt="" width="150px">
+            <img src="./violaimg/Screenshots/Pamja e çastit 2024-10-02 005243.png" alt="" width="150px">
+            <img src="./violaimg/Screenshots/Pamja e çastit 2024-10-02 005301.png" alt="" width="150px">
+            <img src="./violaimg/Screenshots/Pamja e çastit 2024-10-02 005404.png" alt="" width="150px">
+        </div>
+        <div class="gift-container" id="gift" style="width: 100%; ">
+            <div class="lid"></div>
+            <div class="ribbon-horizontal"></div>
+            <div class="ribbon-vertical"></div>
+            <div class="content">
+                <p style="font-size: 1.5rem;">Urime jurispodenca 2025</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const giftContainer = document.getElementById('gift');
+        const flowersDiv = document.getElementById('flowers');
+        const birthdayMessage = document.getElementById('birthdayMessage');
+
+        flowersDiv.addEventListener('click', function () {
+            // Fade out the gift container
+            giftContainer.classList.add('fade-out');
+
+            // After 0.5s, show the Happy Birthday message and start popping images
+            setTimeout(function () {
+                giftContainer.style.display = 'none';  // Hide the gift
+                birthdayMessage.style.display = 'block';  // Show the message
+                // Start popping images
+            }, 500);
+        });
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+
+}
+
+.logo {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+.navBar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navBar li {
+    margin: 30px 0;
+    padding: 10px;
+    border: 1px solid rgb(218, 198, 198);
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+.navBar li a:hover {
+    background-color: rgb(38, 95, 145);
+}
+
+.active {
+    background-color: rgb(152, 192, 227);
+}
+
+.slogan {
+    text-align: center;
+}
