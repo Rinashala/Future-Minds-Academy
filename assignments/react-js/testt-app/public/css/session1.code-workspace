@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../ubt"
+		},
+		{
+			"path": "../../../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Future-Minds-Academy"
+	}
+}

@@ -1,0 +1,25 @@
+.Card {
+    /* size */
+    height: 200px;
+    /* alignment */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 100%;
+    gap: 0.5rem;
+    /* styling */
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0px #ea5bbf;
+}
+
+.Card-Img {
+    object-fit: contain;
+}
+
+.Card-Header {
+    color: plum;
+}
+
+.Card-SubHeader {
+    margin-top: 0;
+    color: plum;
+}
