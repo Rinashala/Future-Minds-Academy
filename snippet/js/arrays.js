@@ -51,7 +51,7 @@ Numbers.forEach((num) => {
     console.log(num)
 });
 // other
-let paragraphs = Array.from(document.querySelectorAll(".p"));
+
 // array functions
 map()
 // Numbers = Numbers.map((number) => number * 2);
